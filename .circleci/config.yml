@@ -37,8 +37,6 @@ workflows:
   pipeline_workflow:
      - build
      - test:
-         requires:
-           - build
+         requires: [build]
      - analyze:
-         requires:
-           - test
+         requires: [test]
