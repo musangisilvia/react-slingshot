@@ -35,6 +35,7 @@ jobs:
 
 workflows:
   pipeline_workflow:
+    jobs:
      - build
      - test:
          requires: [build]
